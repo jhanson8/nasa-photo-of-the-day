@@ -3,6 +3,8 @@
 import React from "react";
 import "./App.css";
 import Picture from "./components/pictureComponent.js";
+import Card from "./components/apodCard.js";
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         app! Have fun 🚀!
       </p>
       <Picture />
+      <Card />
     </div>
   );
 }
