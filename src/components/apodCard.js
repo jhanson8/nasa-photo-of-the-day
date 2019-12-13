@@ -13,7 +13,7 @@ import {
   Button
 } from "reactstrap";
 
-import { MyCardTitle} from "./styles.js";
+import { MyCardTitle, MyCardInfo} from "./styles.js";
 
 
 
@@ -38,8 +38,8 @@ function CardOne() {
         <CardBody>
           <MyCardTitle>{astroCard.title}</MyCardTitle>
           <CardSubtitle>{astroCard.date}</CardSubtitle>
-          <CardText>{astroCard.explanation}</CardText>
-          <Button>Button</Button>
+          <MyCardInfo>{astroCard.explanation}</MyCardInfo>
+          <Button href="https://data.nasa.gov/Space-Science/Astronomy-Picture-of-the-Day-API/ez2w-t8ua">About the APOD API</Button>
         </CardBody>
       </Card>
     </div>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import { MyHOne} from "./styles.js";
 
 
 function Picture(){
@@ -18,7 +19,7 @@ function Picture(){
   }, []);
   return(
     <div className="pictureComponent">
-   <h1>Astronomy Picture of the Day</h1>
+   <MyHOne>Astronomy Picture of the Day</MyHOne>
    <img src={astroPic} alt="astro picture" />
  </div>
   );
