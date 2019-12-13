@@ -22,3 +22,8 @@ export const MyHOne = styled.h1`
   background-color: #D8BFD8;
   font-size: 50px;
 `;
+
+export const MyDate = styled.h3`
+  background-color: #D8BFD8;
+  font-size: 35px;
+`;
