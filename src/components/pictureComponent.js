@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
+
 function Picture(){
   const [astroPic, setAstroPic] = useState("");
 

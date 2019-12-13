@@ -3,29 +3,47 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 
-function Card(){
+import { MyCardTitle} from "./styles.js";
+
+
+
+function CardOne() {
   const [astroCard, setAstroCard] = useState("");
 
   useEffect(() => {
     axios
-      .get("https://api.nasa.gov/planetary/apod?api_key=jWcbGnFWUhpW7dYJFlKWXs5he2yeACCI8T5Ufd3K")
-      .then(response =>{
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=jWcbGnFWUhpW7dYJFlKWXs5he2yeACCI8T5Ufd3K"
+      )
+      .then(response => {
         console.log(response.data);
         setAstroCard(response.data);
         // const cards = response.data;
         // setAstroCard(cards);
       });
   }, []);
-  return(
+  return (
     <div className="cardComponent">
-   <h2>{astroCard.title}</h2>
-   <h3>{astroCard.date}</h3>
-   <p>{astroCard.explanation}</p>
-
-
- </div>
+      <Card>
+        <CardBody>
+          <MyCardTitle>{astroCard.title}</MyCardTitle>
+          <CardSubtitle>{astroCard.date}</CardSubtitle>
+          <CardText>{astroCard.explanation}</CardText>
+          <Button>Button</Button>
+        </CardBody>
+      </Card>
+    </div>
   );
 }
 
-export default Card;
+export default CardOne;
